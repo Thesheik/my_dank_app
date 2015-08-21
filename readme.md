@@ -1,39 +1,43 @@
+# How to set up an Express app (detailed)
+
 1. Set up app
-  - Create a directory
-  - Go into the directory
-  - Initialize a Git repo
-  - Initialize Node Package Manager
-    - Answer its questions
-  - Install Express
-  - Use Node Package Manager to install dependencies
-  - Create the main file
+  - Command line stuff
+    - Create a directory
+    - Go into the directory
+    - Initialize a Git repo
+    - Initialize Node Package Manager
+      - Answer its questions
+    - Install Express
+    - Use Node Package Manager to install dependencies
+    - Create the main file
   - Load Express into main file
-  - Connect Express to the app
-  - Create a way for app to talk to server
-    - Listen to a port
-1.5 Run app to make sure it's working
-1.6 Make app show something in browser
-  - Create a GET route
-  - Make app send something to browser
-2. Set up database
-  - Install Sequelize
-  - Install PG (so that Sequelize can "speak" Postgres)
-  - Install pg-hstore (whatever that is)
+    - Connect Express to the app
+    - Create a way for app to talk to server
+      - Listen to a port
+    - Run app to make sure it's working
+    - Make app show something in browser
+      - Create a GET route
+      - Make app send something to browser
+- Set up database
+  - Command line stuff
+    - Install Sequelize
+    - Install PG (so that Sequelize can "speak" Postgres)
+    - Install pg-hstore (whatever that is)
+    - Create a database
   - Load Sequelize into main file
-  - Create a database
-  - Connect Sequelize to my database
-2.5 Test connection to database
-2.6 Make sure I can save something into the database
+    - Connect Sequelize to my database
+  - Test connection to database
+    - Make sure I can save something into the database
   - Make a model
-  - Set up a schema
-  - Run a migration by "syncing" my model with the database
-  - Make any other required models
+    - Set up a schema
+    - Run a migration by "syncing" my model with the database
+    - Make any other required models
 - Set up routes
   - For each model
     - Make an index route which shows all of that model
     - Make a create route which creates one of that model
     - Make a show route which shows one of that model
-      - Get its ID 
+      - Get its ID
     - Make an edit route which updates one of that model
       - Get its ID
     - Make a delete route which deletes one of that model
