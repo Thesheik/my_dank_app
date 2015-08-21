@@ -1,5 +1,7 @@
 # How to set up an Express app (detailed)
 
+Check the "multifile1" branch for an example of the app being broken up into a couple files.
+
 1. Set up app
   - Command line stuff
     - Create a directory
