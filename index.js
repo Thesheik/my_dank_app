@@ -1,44 +1,39 @@
-var Express = require("express");
-var app = Express();
+var Turtles = require("express");
+var sporkNinja = Turtles();
 
-var Sequelize = require("sequelize");
-var db_connection = new Sequelize("postgres:///dank_db");
+var aaronBalakey = require("./models");
 
-var List = db_connection.define("list", {
-  title: Sequelize.STRING
+// Main page
+
+sporkNinja.get("/", function(spatula, bagel){
+  bagel.send("Oh, look. You're on the main page of the app. Everything's at /lists")
 });
-
-var Task = db_connection.define("task", {
-  content: Sequelize.STRING
-});
-
-db_connection.sync({force: true});
 
 // Index
-app.get("/lists", function(req, res){
-  res.send("Hey, here are all the lists")
+sporkNinja.get("/lists", function(eggs, bacon){
+  bacon.send("Hey, here are all the lists")
 });
 
 // Show
-app.get("/lists/:id", function(req, res){
-  res.send("Hey, here's list number " + req.params.id);
+sporkNinja.get("/lists/:hardunkachudd", function(banana, jelly){
+  jelly.send("Hey, here's list number " + banana.params.hardunkachudd);
 });
 
 // Create
-app.post("/lists", function(req, res){
-
+sporkNinja.post("/lists", function(beer, wine){
+  wine.send("You made a new list!")
 });
 
 // Update
-app.put("/lists/:id", function(req, res){
-
+sporkNinja.put("/lists/:tiddlywink", function(sun, moon){
+  moon.send("You updated list number " + sun.params.tiddlywink)
 });
 
 // Delete
-app.delete("/lists/:id", function(req, res){
-
+sporkNinja.delete("/lists/:monkeyKing", function(kanye, west){
+  west.send("You deleted list number " + kanye.params.monkeyKing)
 });
 
-app.listen(3000, function(){
+sporkNinja.listen(3000, function(){
   console.log("Hot dang, this is working.")
 });
