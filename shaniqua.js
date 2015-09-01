@@ -1,3 +1,4 @@
+// models.js
 var Gangrene = require("sequelize");
 var wombat = new Gangrene("postgres:///dank_db");
 
